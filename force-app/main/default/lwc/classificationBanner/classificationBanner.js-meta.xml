@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Information Classification Banner</masterLabel>
+    <description>Provides an on-screen banner with a note for the approved information/data classification</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property label="Display Message" name="message" type="String" default="This information system is only approved for UNCLASSIFIED//FOR OFFICIAL USE ONLY"></property>
+            <property label="SLDS Theme" name="theme" type="String" default="success" description="Controls the color of the banner. Case sensitive. Can be warning, error, success, or info."></property>
+            <supportedFormFactors>
+                <supportedFormFactor type="Large"></supportedFormFactor>
+                <supportedFormFactor type="Small"></supportedFormFactor>
+            </supportedFormFactors>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

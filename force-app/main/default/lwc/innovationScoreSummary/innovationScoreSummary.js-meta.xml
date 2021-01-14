@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Score Summary</masterLabel>
+    <description>Provides an on-screen depiction of the scorecard summary based on score thresholds</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property label="Positive Threshold" name="positiveThreshold" type="Integer" default="12"></property>
+            <property label="Neutral Threshold" name="neutralThreshold" type="Integer" default="8"></property>
+            <objects>
+                <object>Innovation_Entry__c</object>
+            </objects>
+            <supportedFormFactors>
+                <supportedFormFactor type="Large"></supportedFormFactor>
+                <supportedFormFactor type="Small"></supportedFormFactor>
+            </supportedFormFactors>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
